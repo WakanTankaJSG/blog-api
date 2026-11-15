@@ -1,13 +1,25 @@
-// Requests to test the API from VS Code (REST Client extension)
 @baseUrl = http://localhost:3000
 
-### GET example
-GET {{baseUrl}}/api
+### Lista de autores
+GET {{baseUrl}}/api/autores
 
-### POST example
-POST {{baseUrl}}/api
+### Crear un autor
+POST {{baseUrl}}/api/autores
 Content-Type: application/json
 
 {
-    "name": "example"
+  "nombre": "Lucía Martín",
+  "email": "lucia@ej.com",
+  "imagen": "https://ej.com/fotos/lucia.jpg"
+}
+
+### Crear un post
+POST {{baseUrl}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "Primeros pasos con MySQL",
+  "descripcion": "Tablas, claves y un JOIN para empezar.",
+  "categoria": "Programación",
+  "autor_id": 3
 }
